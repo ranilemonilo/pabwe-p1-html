@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form Pendaftaran</title>
+  </head>
+  <body>
+    <header>
+      <h1>Form Pendaftaran</h1>
+      <nav>
+        <a href="index.html">Blog</a> |
+        <a href="form.html">Form Pendaftaran</a> |
+        <a href="nilai.html">Tabel Perolehan Nilai</a> |
+        <a href="cv.html">Curriculum Vitae</a>
+      </nav>
+      <hr />
+    </header>
+
+    <form action="#" method="post">
+      <p>
+        <label
+          >Nama Lengkap:<br />
+          <input type="text" name="nama" required />
+        </label>
+      </p>
+
+      <fieldset>
+        <legend>Jenis Kelamin (pilih satu)</legend>
+        <label
+          ><input type="radio" name="jk" value="L" required /> Laki-laki</label
+        ><br />
+        <label><input type="radio" name="jk" value="P" /> Perempuan</label>
+      </fieldset>
+
+      <p>
+        <label
+          >Tempat Lahir:<br />
+          <input type="text" name="tempat_lahir" required />
+        </label>
+      </p>
+
+      <p>
+        <label
+          >Tanggal Lahir:<br />
+          <input type="date" name="tanggal_lahir" required />
+        </label>
+      </p>
+
+      <fieldset>
+        <legend>Hobi (boleh lebih dari satu)</legend>
+        <label
+          ><input type="checkbox" name="hobi" value="Membaca" /> Membaca</label
+        ><br />
+        <label
+          ><input type="checkbox" name="hobi" value="Olahraga" />
+          Olahraga</label
+        ><br />
+        <label><input type="checkbox" name="hobi" value="Musik" /> Musik</label>
+      </fieldset>
+
+      <p>
+        <label
+          >Password:<br />
+          <input type="password" name="password" required />
+        </label>
+      </p>
+
+      <p>
+        <label>
+          <input type="checkbox" name="persetujuan" required />
+          Saya menyetujui ketentuan yang berlaku.
+        </label>
+      </p>
+
+      <p>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Form Pendaftaran</p>
+    </footer>
+  </body>
+</html>

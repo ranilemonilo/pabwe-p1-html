@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Detail Blog - Tips Belajar Web Dasar</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">&larr; Kembali ke Blog</a>
+      <hr />
+    </header>
+
+    <article>
+      <img src="cover.jpg" alt="Cover Postingan" width="400" />
+      <h1>Tips Belajar Web Dasar untuk Pemula</h1>
+
+      <section>
+        <h2>Author</h2>
+        <img src="author.jpg" alt="Foto Author" width="80" />
+        <p>Nama: <strong>Maharani Sitorus</strong></p>
+        <p>
+          Tanggal Postingan: <time datetime="2025-08-30">30 Agustus 2025</time>
+        </p>
+      </section>
+
+      <section>
+        <h2>Label</h2>
+        <ul>
+          <li>HTML</li>
+          <li>Belajar</li>
+          <li>Kampus</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Deskripsi</h2>
+        <p>
+          Pada artikel ini kita membahas struktur dasar HTML:
+          <code>&lt;!DOCTYPE html&gt;</code>, elemen <code>&lt;head&gt;</code>,
+          dan <code>&lt;body&gt;</code>, serta bagaimana menyusun konten yang
+          semantik agar mudah dibaca.
+        </p>
+      </section>
+    </article>
+
+    <hr />
+
+    <section>
+      <h2>Form Komentar</h2>
+      <form action="#" method="post">
+        <p>
+          <label
+            >Nama:<br />
+            <input type="text" name="nama" required />
+          </label>
+        </p>
+        <p>
+          <label
+            >Komentar:<br />
+            <textarea name="isi" rows="4" cols="40" required></textarea>
+          </label>
+        </p>
+        <p>
+          <label
+            >Upload Foto (opsional):<br />
+            <input type="file" name="foto" />
+          </label>
+        </p>
+        <p>
+          <button type="reset">Reset</button>
+          <button type="submit">Kirim</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Daftar Komentar</h2>
+
+      <article>
+        <img src="komentator1.jpg" alt="Foto Komentator 1" width="60" />
+        <p><strong>Nadira</strong></p>
+        <p>Artikelnya jelas. Terima kasih!</p>
+      </article>
+
+      <article>
+        <img src="komentator2.jpg" alt="Foto Komentator 2" width="60" />
+        <p><strong>Arga</strong></p>
+        <p>Suka bagian contoh struktur HTML dasarnya.</p>
+      </article>
+    </section>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Blog Kampus</p>
+    </footer>
+  </body>
+</html>
