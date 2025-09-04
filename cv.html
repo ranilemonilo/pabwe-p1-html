@@ -3,6 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <title>Curriculum Vitae - Maharani Sitorus</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        margin: 0;
+        color: #22223b;
+      }
+      header {
+        background: #4f46e5;
+        color: #fff;
+        padding: 24px 0 12px 0;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 8px;
+        font-weight: 500;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      section {
+        background: #fff;
+        margin: 24px auto;
+        padding: 20px 32px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.08);
+        max-width: 700px;
+      }
+      h1,
+      h2 {
+        font-family: "Montserrat", Arial, sans-serif;
+      }
+      h1 {
+        margin-bottom: 8px;
+        font-size: 2.2em;
+        letter-spacing: 1px;
+      }
+      h2 {
+        color: #4f46e5;
+        margin-top: 0;
+      }
+      img {
+        border-radius: 50%;
+        border: 3px solid #4f46e5;
+        box-shadow: 0 2px 8px rgba(79, 70, 229, 0.15);
+        margin-bottom: 8px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      footer {
+        text-align: center;
+        padding: 16px 0;
+        background: #4f46e5;
+        color: #fff;
+        margin-top: 32px;
+      }
+      .info-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 16px;
+      }
+      .info-table td {
+        padding: 6px 12px;
+        border-bottom: 1px solid #e0e7ff;
+      }
+      .info-table td.label {
+        font-weight: bold;
+        color: #4f46e5;
+        width: 120px;
+      }
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+      }
+      .skills-list li {
+        background: #e0e7ff;
+        color: #3730a3;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 1em;
+      }
+      @media (max-width: 600px) {
+        section {
+          padding: 16px 8px;
+        }
+        .info-table td.label {
+          width: 80px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -10,35 +106,59 @@
       <nav>
         <a href="index.html">Blog</a> |
         <a href="form.html">Form Pendaftaran</a> |
-        <a href="nilai.html">Tabel Perolehan Nilai</a> |
+        <a href="nilai.html">Tabel Nilai</a> |
         <a href="cv.html">Curriculum Vitae</a>
       </nav>
-      <hr />
     </header>
 
-    <section>
-      <h2>Foto</h2>
+    <section style="text-align: center">
       <img src="foto-profil.jpg" alt="Foto Profil" width="140" />
+      <table class="info-table" style="margin: 0 auto">
+        <tr>
+          <td class="label">Nama</td>
+          <td>Maharani Sitorus</td>
+        </tr>
+        <tr>
+          <td class="label">Tempat/Tgl Lahir</td>
+          <td>Balige, 5 Mei 2005</td>
+        </tr>
+        <tr>
+          <td class="label">Alamat</td>
+          <td>Jl. Pendidikan No. 10, Balige, Sumatera Utara</td>
+        </tr>
+        <tr>
+          <td class="label">Status</td>
+          <td>Mahasiswi</td>
+        </tr>
+      </table>
     </section>
 
     <section>
-      <h2>Tentang</h2>
+      <h2>Tentang Saya</h2>
       <p>
-        Mahasiswi informatika yang menyukai pengembangan web dasar dan penulisan
-        kreatif.
+        Mahasiswi Informatika di Institut Teknologi Del yang antusias dalam
+        pengembangan web, desain UI/UX, dan penulisan kreatif. Memiliki motivasi
+        tinggi untuk belajar teknologi baru dan aktif dalam organisasi kampus.
       </p>
     </section>
 
     <section>
       <h2>Kontak</h2>
       <p>
-        Email:
+        <strong>Email:</strong>
         <a href="mailto:maharanisitorus5@gmail.com"
           >maharanisitorus5@gmail.com</a
         >
       </p>
       <p>
-        WhatsApp: <a href="https://wa.me/62895343372045">+62 895-3433-72045</a>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/62895343372045">+62 895-3433-72045</a>
+      </p>
+      <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://linkedin.com/in/maharanisitorus" target="_blank"
+          >linkedin.com/in/maharanisitorus</a
+        >
       </p>
     </section>
 
@@ -51,22 +171,26 @@
     </section>
 
     <section>
-      <h2>Pengalaman</h2>
+      <h2>Pengalaman Organisasi & Kegiatan</h2>
       <ul>
         <li>
           Anggota Himpunan Mahasiswa Sarjana Informatika Divisi Minat dan Bakat
           (2024-2025)
         </li>
         <li>Student Leadership Program di Institut Teknologi Del (2024)</li>
+        <li>Panitia Seminar Nasional IT Del (2024)</li>
       </ul>
     </section>
 
     <section>
       <h2>Keahlian</h2>
-      <ul>
-        <li>UI UX Desain</li>
+      <ul class="skills-list">
+        <li>UI/UX Design</li>
         <li>HTML Dasar</li>
-        <li>Komunikasi tim</li>
+        <li>CSS</li>
+        <li>Komunikasi Tim</li>
+        <li>Penulisan Kreatif</li>
+        <li>Manajemen Waktu</li>
       </ul>
     </section>
 
@@ -76,6 +200,7 @@
         <li>
           Student Leadership Program di Institut Teknologi Del (2024-2025)
         </li>
+        <li>Pelatihan Dasar HTML & CSS (2023)</li>
       </ul>
     </section>
 
@@ -84,11 +209,17 @@
       <ul>
         <li><a href="index.html">Blog Mini (HTML murni)</a></li>
         <li><a href="nilai.html">Tabel Nilai</a></li>
+        <li>
+          <a
+            href="https://github.com/maharanisitorus/web-project"
+            target="_blank"
+            >Web Project (GitHub)</a
+          >
+        </li>
       </ul>
     </section>
 
     <footer>
-      <hr />
       <p>&copy; 2025 Maharani Sitorus</p>
     </footer>
   </body>

@@ -3,6 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <title>Blog - Latihan HTML</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        margin: 0;
+        color: #333;
+      }
+      header {
+        background: #4e54c8;
+        color: #fff;
+        padding: 20px 0 10px 0;
+        text-align: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        border: none;
+        border-top: 2px solid #4e54c8;
+        margin: 20px 0;
+      }
+      article {
+        background: #fff;
+        max-width: 600px;
+        margin: 30px auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(78, 84, 200, 0.08);
+        padding: 24px;
+      }
+      article h2 a {
+        color: #4e54c8;
+        text-decoration: none;
+      }
+      article h2 a:hover {
+        text-decoration: underline;
+      }
+      img[alt="Cover Blog"] {
+        display: block;
+        margin: 0 auto 16px auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(78, 84, 200, 0.12);
+      }
+      section {
+        margin-top: 20px;
+        padding: 16px;
+        border-radius: 8px;
+        background: #f0f2fa;
+      }
+      section h3 {
+        margin-top: 0;
+        color: #4e54c8;
+      }
+      img[alt="Foto Author"] {
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 10px;
+        border: 2px solid #4e54c8;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      ul li {
+        background: #4e54c8;
+        color: #fff;
+        display: inline-block;
+        margin: 4px 8px 4px 0;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.95em;
+      }
+      footer {
+        background: #4e54c8;
+        color: #fff;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 40px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -18,12 +102,27 @@
 
     <article>
       <img src="cover.jpg" alt="Cover Blog" width="300" />
-      <h2><a href="detail.html">Tips Belajar Web Dasar untuk Pemula</a></h2>
+      <h2>
+        <a href="detail.html">Tips Belajar Web Dasar untuk Pemula</a>
+      </h2>
+      <p>
+        <em>
+          Selamat datang di Blog Kampus! Di sini kamu akan menemukan berbagai
+          tips, inspirasi, dan pengalaman menarik seputar dunia web dan
+          pembelajaran di kampus. Yuk, mulai perjalanan belajarmu bersama kami!
+        </em>
+      </p>
 
       <section>
         <h3>Author</h3>
         <img src="author.jpg" alt="Foto Author" width="80" />
-        <p>Nama: <strong>Maharani Sitorus</strong></p>
+        <p>
+          Nama: <strong>Maharani Sitorus</strong><br />
+          <span style="color: #666"
+            >Mahasiswa Informatika yang suka berbagi ilmu dan pengalaman seputar
+            dunia web.</span
+          >
+        </p>
         <p>
           Tanggal Postingan: <time datetime="2025-08-30">30 Agustus 2025</time>
         </p>
@@ -36,12 +135,17 @@
           <li>Belajar</li>
           <li>Kampus</li>
         </ul>
+        <p>
+          <small>
+            Temukan artikel lain dengan label serupa untuk memperluas wawasanmu!
+          </small>
+        </p>
       </section>
     </article>
 
     <footer>
       <hr />
-      <p>&copy; 2025 Blog Kampus</p>
+      <p>&copy; 2025 Blog Kampus | Dibuat dengan semangat berbagi ilmu</p>
     </footer>
   </body>
 </html>

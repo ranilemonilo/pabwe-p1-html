@@ -3,11 +3,167 @@
   <head>
     <meta charset="UTF-8" />
     <title>Detail Blog - Tips Belajar Web Dasar</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+        margin: 0;
+        color: #222;
+      }
+      header,
+      footer {
+        background: #6366f1;
+        color: #fff;
+        padding: 16px 0;
+        text-align: center;
+      }
+      header a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      article {
+        background: #fff;
+        margin: 32px auto 24px auto;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(99, 102, 241, 0.08);
+        max-width: 700px;
+      }
+      article img:first-child {
+        display: block;
+        margin: 0 auto 16px auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.12);
+      }
+      h1 {
+        color: #4f46e5;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      section {
+        margin-bottom: 24px;
+      }
+      section h2 {
+        color: #6366f1;
+        margin-bottom: 8px;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+      }
+      ul li {
+        background: #6366f1;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 16px;
+        font-size: 0.95em;
+      }
+      .author-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 8px;
+      }
+      .author-info img {
+        border-radius: 50%;
+        border: 2px solid #6366f1;
+      }
+      form {
+        background: #f1f5f9;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(99, 102, 241, 0.06);
+        max-width: 500px;
+        margin: 0 auto 24px auto;
+      }
+      form label {
+        font-weight: 500;
+        color: #4f46e5;
+      }
+      form input[type="text"],
+      form textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        margin-bottom: 12px;
+        border: 1px solid #c7d2fe;
+        border-radius: 6px;
+        font-size: 1em;
+        background: #fff;
+      }
+      form input[type="file"] {
+        margin-top: 4px;
+        margin-bottom: 12px;
+      }
+      form button {
+        background: #6366f1;
+        color: #fff;
+        border: none;
+        padding: 8px 18px;
+        border-radius: 6px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: background 0.2s;
+      }
+      form button[type="reset"] {
+        background: #a5b4fc;
+        color: #222;
+      }
+      form button:hover {
+        background: #4f46e5;
+      }
+      .komentar-list {
+        max-width: 700px;
+        margin: 0 auto 32px auto;
+      }
+      .komentar-list article {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        background: #f3f4f6;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 4px rgba(99, 102, 241, 0.04);
+      }
+      .komentar-list img {
+        border-radius: 50%;
+        border: 2px solid #6366f1;
+      }
+      .komentar-list p {
+        margin: 4px 0;
+      }
+      footer {
+        margin-top: 32px;
+        font-size: 1em;
+      }
+      code {
+        background: #e0e7ff;
+        color: #4f46e5;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.97em;
+      }
+      @media (max-width: 600px) {
+        article,
+        .komentar-list {
+          padding: 8px;
+          max-width: 98vw;
+        }
+        form {
+          padding: 8px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
       <a href="index.html">&larr; Kembali ke Blog</a>
-      <hr />
     </header>
 
     <article>
@@ -16,11 +172,16 @@
 
       <section>
         <h2>Author</h2>
-        <img src="author.jpg" alt="Foto Author" width="80" />
-        <p>Nama: <strong>Maharani Sitorus</strong></p>
-        <p>
-          Tanggal Postingan: <time datetime="2025-08-30">30 Agustus 2025</time>
-        </p>
+        <div class="author-info">
+          <img src="author.jpg" alt="Foto Author" width="80" />
+          <div>
+            <p>Nama: <strong>Maharani Sitorus</strong></p>
+            <p>
+              Tanggal Postingan:
+              <time datetime="2025-08-30">30 Agustus 2025</time>
+            </p>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -43,26 +204,24 @@
       </section>
     </article>
 
-    <hr />
-
     <section>
       <h2>Form Komentar</h2>
       <form action="#" method="post">
         <p>
-          <label
-            >Nama:<br />
+          <label>
+            Nama:<br />
             <input type="text" name="nama" required />
           </label>
         </p>
         <p>
-          <label
-            >Komentar:<br />
+          <label>
+            Komentar:<br />
             <textarea name="isi" rows="4" cols="40" required></textarea>
           </label>
         </p>
         <p>
-          <label
-            >Upload Foto (opsional):<br />
+          <label>
+            Upload Foto (opsional):<br />
             <input type="file" name="foto" />
           </label>
         </p>
@@ -73,24 +232,27 @@
       </form>
     </section>
 
-    <section>
+    <section class="komentar-list">
       <h2>Daftar Komentar</h2>
 
       <article>
         <img src="komentator1.jpg" alt="Foto Komentator 1" width="60" />
-        <p><strong>Nadira</strong></p>
-        <p>Artikelnya jelas. Terima kasih!</p>
+        <div>
+          <p><strong>Nadira</strong></p>
+          <p>Artikelnya jelas. Terima kasih!</p>
+        </div>
       </article>
 
       <article>
         <img src="komentator2.jpg" alt="Foto Komentator 2" width="60" />
-        <p><strong>Arga</strong></p>
-        <p>Suka bagian contoh struktur HTML dasarnya.</p>
+        <div>
+          <p><strong>Arga</strong></p>
+          <p>Suka bagian contoh struktur HTML dasarnya.</p>
+        </div>
       </article>
     </section>
 
     <footer>
-      <hr />
       <p>&copy; 2025 Blog Kampus</p>
     </footer>
   </body>
